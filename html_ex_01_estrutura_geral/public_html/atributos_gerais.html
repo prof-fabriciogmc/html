@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+          #destino_01{
+              background-color:yellow;
+              width: 100px;
+              height: 100px;
+              border: solid;
+          }
+          #destino_02{
+              background-color:magenta;
+              width: 100px;
+              height: 100px;
+              border: solid;
+          }
+        </style>
+        <script>
+            
+            function prevenirRedirect(e) {
+                e.preventDefault();
+            }
+            
+            function arrastar(e) {
+                console.log("Arrastando...");
+                e.dataTransfer.setData("Text", e.target.id);
+            }
+            function soltar(e){
+               console.log("Soltando...");
+               var idOrigem = e.dataTransfer.getData("Text");
+               e.target.appendChild(document.getElementById(idOrigem));
+            }
+            window.onload = function(){
+                console.log("Adicionando tratadores de eventos...");
+                origem=document.getElementById("origem_dado");
+                destino_01=document.getElementById("destino_01");
+                destino_02=document.getElementById("destino_02");
+                origem.ondragstart = arrastar;
+                destino_01.ondragover = prevenirRedirect;
+                destino_01.ondrop=soltar; 
+                destino_02.ondragover = prevenirRedirect;
+                destino_02.ondrop=soltar;
+            };
+            
+        </script>
+        <title>Meu primeiro documento HTML.</title>
+    </head>
+    <body>
+        <p>Primeiro exemplo HTML!</p>
+        <p hidden>Elemento oculto...</p>
+        <p id=origem_dado draggable="true" >Elemento "arrastável" </p>
+        <p contenteditable>Elemento editável </p>
+        <div id=destino_01></div>
+        <div id=destino_02></div>
+        <!-- Isto é um comentário e não será renderizado. -->
+    </body>
+</html>
