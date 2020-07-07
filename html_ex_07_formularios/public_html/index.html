@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos.css"/>
+        <title>Exemplo de formulários. </title>       
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <!-- formulário contendo entradas de texto -->
+        <form id=form01 action="acao.html" method="get">
+            <input name=uid id=hidden01 type="hidden" value="xyz"/>
+            <label for="ent_01">Nome:</label>
+            <input name=nome id=ent_01 type="text" required/><br/>
+            <label for="ent_01b">Senha:</label>
+            <input name=senha id=ent_01b type="password" required/><br/>
+            <label>Data de nascimento:</label> 
+            <input name=datanasc id=ent_02 type="date"> <br/>
+            <label for="ent_03">Comentários:</label>
+            <textarea name=comentarios id=ent_03>
+                Insira aqui seus comentários...
+            </textarea> <br/>
+            <input type="submit" value="Enviar"/>
+        </form>
+
+        <form id="form02" method="post" action="acao.html">
+            <fieldset>
+                <legend> Pesquisa sobre maior país da América do Sul.</legend>
+                <input type="radio" name="maiorpais" value="bra" /> Brasil  <br/>
+                <input type="radio" name="maiorpais" value="arg" /> Argentina <br/>
+                <input type="radio" name="maiorpais" value="par" /> Paraguai <br/>
+            </fieldset> 
+            
+            <label for="select01">País(es) de residência nos últimos 2 anos:</label><br/>
+            <select id=select01 name="paisresidencia" size="3" multiple>
+                <option value="BR">Brasil</option>
+                <option value="US">Estados Unidos</option>
+                <option value="US">Argentina</option>
+            </select><br/>
+           
+            <fieldset>
+                <legend>Suas paisagens favoritas</legend>
+                <label for="fav01">Praia</label>
+                <input id=fav01 name=favoritos type="checkbox" value="praia"/>
+                <label for="fav01">Montanha</label>
+                <input id=fav02 name=favoritos type="checkbox" value="montanha" />
+            </fieldset>
+            
+            <label for="foto_pais">Foto de seu país favorito: </label>
+            <input id=foto_pais name="arquivo" type="file" ><br/>   
+            <input type="submit" value="Enviar"/>
+        </form>
+        
+
+    </body>
+</html>

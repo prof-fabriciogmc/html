@@ -1,1 +1,9 @@
 nbproject/
+.nb-gradle/
+.gradle/
+gradle/
+build/
+
+
+*.class
+

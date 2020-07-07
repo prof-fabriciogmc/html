@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos.css"/>
+        <title>Exemplo de formulários. </title>       
+        <meta charset="UTF-8">
+    </head>
+    <body>
+       <form id="form02" method="post" action="Pesquisa">
+            <fieldset>
+                <legend> Pesquisa sobre maior país da América do Sul.</legend>
+                <input type="radio" name="maiorpais" value="bra" /> Brasil  <br/>
+                <input type="radio" name="maiorpais" value="arg" /> Argentina <br/>
+                <input type="radio" name="maiorpais" value="par" /> Paraguai <br/>
+            </fieldset> 
+            
+            <label for="select01">País(es) de residência nos últimos 2 anos:</label><br/>
+            <select id=select01 name="paisresidencia" size="3" multiple>
+                <option value="BR">Brasil</option>
+                <option value="US">Estados Unidos</option>
+                <option value="AR">Argentina</option>
+            </select><br/>
+           
+            <fieldset>
+                <legend>Suas paisagens favoritas</legend>
+                <label for="fav01">Praia</label>
+                <input id=fav01 name=favoritos type="checkbox" value="praia"/>
+                <label for="fav01">Montanha</label>
+                <input id=fav02 name=favoritos type="checkbox" value="montanha" />
+            </fieldset>         
+            <input type="submit" value="Enviar"/>
+        </form>
+    </body>
+</html>

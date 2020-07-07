@@ -1,0 +1,12 @@
+.coluna {
+    width: 49%;
+    border: solid;
+    font-family: arial;
+    background-color: yellow; 
+    display: inline-block;
+    margin: auto;        
+}
+.linha{
+    margin: auto;
+    background-color: blue;
+}

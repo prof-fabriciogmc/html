@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exemplificando tabelas e scripts.</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="script.js" type="text/javascript">
+            
+        </script>
+    </head>
+    <body>
+        <p id=par_01 onclick="formato();"> Tabela com título de colunas </p>
+        <table>
+            <tr>
+                <th> Terça-feira</th>
+                <th> Sexta-feira</th>
+            </tr>
+            <tr>
+                <td onclick="formatoCelula();">Lab. Es.</td>
+                <td>Lab. Es</td>
+            </tr>
+        </table>
+        <p> Tabela com título de linhas </p>
+        <table>
+            <tr>
+                <th> Terça-feira</th>
+                <td> Lab. Es</td>
+            </tr>
+            <tr>
+                <th>Sexta-feira</th>
+                <td>Lab. Es</td>
+            </tr>
+        </table>
+        <p> Tabela com colunas expandidas. </p>
+        <table>
+            <tr>
+                <th> Coluna 1</th>
+                <th> Coluna 2</th>
+                <th> Coluna 3</th>
+            </tr>
+            <tr>
+                <td>Célula Simples</td>
+                <td colspan="2">Célula pertencente a 2 colunas.</td>                
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>
